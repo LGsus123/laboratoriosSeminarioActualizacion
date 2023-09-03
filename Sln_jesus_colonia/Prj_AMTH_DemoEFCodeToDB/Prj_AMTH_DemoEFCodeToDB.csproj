@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>e8f1cd9e-38ee-497c-9067-5e3561eb0359</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+  </ItemGroup>
+
+</Project>
