@@ -5,11 +5,11 @@ namespace Prj_JACV_MVCBibliotecaApp.Models;
 
 public partial class Prestamo
 {
-    public int Idprestamo { get; set; }
+    public int IDPrestamo { get; set; }
 
-    public string? Isbn { get; set; }
+    public string? ISBN { get; set; }
 
-    public int? Idusuario { get; set; }
+    public int? IDUsuario { get; set; }
 
     public DateTime? FechaPrestamo { get; set; }
 

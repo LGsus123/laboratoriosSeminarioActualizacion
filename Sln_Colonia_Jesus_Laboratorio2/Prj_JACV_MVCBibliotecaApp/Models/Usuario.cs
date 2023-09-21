@@ -5,7 +5,7 @@ namespace Prj_JACV_MVCBibliotecaApp.Models;
 
 public partial class Usuario
 {
-    public int Idusuario { get; set; }
+    public int IDUsuario { get; set; }
 
     public string? Nombre { get; set; }
 

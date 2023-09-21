@@ -12,12 +12,10 @@
 <table class="table">
     <thead>
         <tr>
-            <th>@Html.DisplayNameFor(model=>model.IdPrestamo)</th>
             <th>@Html.DisplayNameFor(model=>model.ISBN)</th>
-            <th>@Html.DisplayNameFor(model=>model.IdUsuario)</th>
-            <th>@Html.DisplayNameFor(model=>model.Nombre)</th>
+            <th>@Html.DisplayNameFor(model=>model.IDUsuario)</th>
             <th>@Html.DisplayNameFor(model=>model.Apellido)</th>
-            <th>@Html.DisplayNameFor(model=>model.Libro)</th>
+            <th>@Html.DisplayNameFor(model=>model.Nombre)</th>
             <th>@Html.DisplayNameFor(model=>model.Titulo)</th>
             <th>@Html.DisplayNameFor(model=>model.Autor)</th>
             <th>@Html.DisplayNameFor(model=>model.Editorial)</th>
@@ -27,12 +25,10 @@
         @foreach(var item in Model)
         {
             <tr>
-                <td>@Html.DisplayFor(model=>item.IdPrestamo)</td>
                 <td>@Html.DisplayFor(model=>item.ISBN)</td>
-                <td>@Html.DisplayFor(model=>item.IdUsuario)</td>
-                <td>@Html.DisplayFor(model=>item.Nombre)</td>
+                <td>@Html.DisplayFor(model=>item.IDUsuario)</td>
                 <td>@Html.DisplayFor(model=>item.Apellido)</td>
-                <td>@Html.DisplayFor(model=>item.Libro)</td>
+                <td>@Html.DisplayFor(model=>item.Nombre)</td>
                 <td>@Html.DisplayFor(model=>item.Titulo)</td>
                 <td>@Html.DisplayFor(model=>item.Autor)</td>
                 <td>@Html.DisplayFor(model=>item.Editorial)</td>

@@ -89,7 +89,7 @@ namespace Prj_JACV_MVCBibliotecaApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Idusuario,Nombre,Apellido,Direccion,Telefono")] Usuario usuario)
         {
-            if (id != usuario.Idusuario)
+            if (id != usuario.IDUsuario)
             {
                 return NotFound();
             }
@@ -103,7 +103,7 @@ namespace Prj_JACV_MVCBibliotecaApp.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsuarioExists(usuario.Idusuario))
+                    if (!UsuarioExists(usuario.IDUsuario))
                     {
                         return NotFound();
                     }
@@ -126,7 +126,7 @@ namespace Prj_JACV_MVCBibliotecaApp.Controllers
             }
 
             var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Idusuario == id);
+                .FirstOrDefaultAsync(m => m.IDUsuario == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -156,7 +156,7 @@ namespace Prj_JACV_MVCBibliotecaApp.Controllers
 
         private bool UsuarioExists(int id)
         {
-          return (_context.Usuarios?.Any(e => e.Idusuario == id)).GetValueOrDefault();
+          return (_context.Usuarios?.Any(e => e.IDUsuario == id)).GetValueOrDefault();
         }
     }
 }

@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Prj_JACV_MVCBibliotecaApp.Models.PrestamosReport_Result>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Reporte de prestamos - SP</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model=>model.Id)</th>
+            <th>@Html.DisplayNameFor(model=>model.Apellido)</th>
+            <th>@Html.DisplayNameFor(model=>model.Nombre)</th>
+            <th>@Html.DisplayNameFor(model=>model.ISBN)</th>
+            <th>@Html.DisplayNameFor(model=>model.Titulo)</th>
+            <th>@Html.DisplayNameFor(model=>model.Autor)</th>
+            <th>@Html.DisplayNameFor(model=>model.Editorial)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model=>item.Id)</td>
+                <td>@Html.DisplayFor(model=>item.Apellido)</td>
+                <td>@Html.DisplayFor(model=>item.Nombre)</td>
+                <td>@Html.DisplayFor(model=>item.ISBN)</td>
+                <td>@Html.DisplayFor(model=>item.Titulo)</td>
+                <td>@Html.DisplayFor(model=>item.Autor)</td>
+                <td>@Html.DisplayFor(model=>item.Editorial)</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,12 +1,14 @@
-﻿namespace Prj_JACV_MVCBibliotecaApp.Models
+﻿using Microsoft.EntityFrameworkCore;
+using Prj_JACV_MVCBibliotecaApp.Controllers;
+
+namespace Prj_JACV_MVCBibliotecaApp.Models
 {
+    [Keyless]
     public class Prestamo_Result
-    {
-        public int IdPrestamo { get; set; }
-        public int IdUsuario { get; set; }
+    {        
+        public int IDUsuario { get; set; }
 
         public string ISBN { get; set; }
-        public string Libro { get; set; }
 
         public string Nombre { get; set; }
         public string Apellido { get; set; }

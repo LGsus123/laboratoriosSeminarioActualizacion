@@ -20,6 +20,7 @@ public partial class BdJacvLaboratorio2Context : DbContext
     public virtual DbSet<Prestamo> Prestamos { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
+    public virtual DbSet<Prestamo_Result> Prestamo_Results { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -27,6 +28,7 @@ public partial class BdJacvLaboratorio2Context : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Prestamo_Result>();
         modelBuilder.Entity<Libro>(entity =>
         {
             entity.HasKey(e => e.Isbn).HasName("PK__Libros__447D36EB6DC01A21");
@@ -48,31 +50,31 @@ public partial class BdJacvLaboratorio2Context : DbContext
 
         modelBuilder.Entity<Prestamo>(entity =>
         {
-            entity.HasKey(e => e.Idprestamo).HasName("PK__Prestamo__11A8682676598A52");
+            entity.HasKey(e => e.IDPrestamo).HasName("PK__Prestamo__11A8682676598A52");
 
-            entity.Property(e => e.Idprestamo).HasColumnName("IDPrestamo");
+            entity.Property(e => e.IDPrestamo).HasColumnName("IDPrestamo");
             entity.Property(e => e.FechaDevolucion).HasColumnType("date");
             entity.Property(e => e.FechaPrestamo).HasColumnType("date");
-            entity.Property(e => e.Idusuario).HasColumnName("IDUsuario");
-            entity.Property(e => e.Isbn)
+            entity.Property(e => e.IDUsuario).HasColumnName("IDUsuario");
+            entity.Property(e => e.ISBN)
                 .HasMaxLength(20)
                 .IsUnicode(false)
                 .HasColumnName("ISBN");
 
             entity.HasOne(d => d.IdusuarioNavigation).WithMany(p => p.Prestamos)
-                .HasForeignKey(d => d.Idusuario)
+                .HasForeignKey(d => d.IDUsuario)
                 .HasConstraintName("FK__Prestamos__IDUsu__29572725");
 
             entity.HasOne(d => d.IsbnNavigation).WithMany(p => p.Prestamos)
-                .HasForeignKey(d => d.Isbn)
+                .HasForeignKey(d => d.ISBN)
                 .HasConstraintName("FK__Prestamos__ISBN__286302EC");
         });
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Idusuario).HasName("PK__Usuarios__52311169D6F11181");
+            entity.HasKey(e => e.IDUsuario).HasName("PK__Usuarios__52311169D6F11181");
 
-            entity.Property(e => e.Idusuario).HasColumnName("IDUsuario");
+            entity.Property(e => e.IDUsuario).HasColumnName("IDUsuario");
             entity.Property(e => e.Apellido)
                 .HasMaxLength(50)
                 .IsUnicode(false);
