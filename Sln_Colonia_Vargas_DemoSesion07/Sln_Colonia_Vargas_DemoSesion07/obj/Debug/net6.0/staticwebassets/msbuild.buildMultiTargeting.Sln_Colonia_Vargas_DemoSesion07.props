@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Sln_Colonia_Vargas_DemoSesion07.props" />
+</Project>

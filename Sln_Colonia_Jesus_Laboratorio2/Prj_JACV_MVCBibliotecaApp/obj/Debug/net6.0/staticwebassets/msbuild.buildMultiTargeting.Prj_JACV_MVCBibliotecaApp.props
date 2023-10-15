@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Prj_JACV_MVCBibliotecaApp.props" />
-</Project>

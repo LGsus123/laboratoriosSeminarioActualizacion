@@ -4,8 +4,34 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome Laboratory 2</h1>
-    <a href="Libroes/Index">Go to Libros Controller - Index View</a><br />
-    <a href="Usuarios/Index">Go to Usuarios Controller - Index View</a><br />
-    <a href="Prestamos/Index">Go to Prestamos Controller - Index View</a><br />
-    <a href="PrestamosSP/Index">Go to Prestamos - SP Controller - Index View</a><br />
 </div>
+
+<div class="dashboard">
+    <div class="dashboard-item">
+        <a href="Libroes/Index">Go to Libros Controller - Index View</a>
+    </div>
+    <div class="dashboard-item">
+        <a href="Usuarios/Index">Go to Usuarios Controller - Index View</a>
+    </div>
+    <div class="dashboard-item">
+        <a href="Prestamos/Index">Go to Prestamos Controller - Index View</a>
+    </div>
+    <div class="dashboard-item">
+        <a href="PrestamosSP/Index">Go to Prestamos - SP Controller - Index View</a>
+    </div>
+</div>
+
+<style>
+    .dashboard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en el grid */
+        grid-gap: 20px; /* Espacio entre elementos */
+    }
+
+    .dashboard-item {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+</style>
