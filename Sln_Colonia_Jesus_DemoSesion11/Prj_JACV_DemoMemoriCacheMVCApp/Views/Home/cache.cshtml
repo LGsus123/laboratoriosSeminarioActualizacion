@@ -1,0 +1,16 @@
+﻿@model DateTime?
+<div>
+	<h2>Actions</h2>
+	<ul>
+		<li><a asp-controller="Home" asp-action="CacheTryGetValueSet">TryGetValue and Set</a></li>
+		<li><a asp-controller="Home" asp-action="CacheGet">Cache Get</a></li>
+		<li><a asp-controller="Home" asp-action="CacheRemove">Cache Remove</a></li>
+		<li><a asp-controller="Home" asp-action="CacheGetOrCreate">Cache Get Or Create</a></li>
+		<li><a asp-controller="Home" asp-action="CacheGetOrCreateAsynchronous">Cache Get Or Create Asynchronous</a></li>
+		<li><a asp-controller="Home" asp-action="CacheGetOrCreateAbs">Cache Get Or Create Abs</a></li>
+		<li><a asp-controller="Home" asp-action="CacheGetOrCreateAbsSliding">Cache Get Or Create Abs Sliding</a></li>
+	</ul>
+</div>
+
+<h3>Current Time: @DateTime.Now.TimeOfDay.ToString()</h3>
+<h3>Cached Time: @(Model==null?"No Cached Entry Found":Model.Value.TimeOfDay.ToString())</h3>
