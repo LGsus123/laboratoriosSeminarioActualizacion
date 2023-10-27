@@ -1,0 +1,34 @@
+﻿@model DateTime?
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Actions</h2>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a asp-controller="Home" asp-action="CacheTryGetValueSet">TryGetValue and Set</a></li>
+                        <li class="list-group-item"><a asp-controller="Home" asp-action="CacheGet">Cache Get</a></li>
+                        <li class="list-group-item"><a asp-controller="Home" asp-action="CacheRemove">Cache Remove</a></li>
+                        <li class="list-group-item"><a asp-controller="Home" asp-action="CacheGetOrCreate">Cache Get Or Create</a></li>
+                        <li class="list-group-item"><a asp-controller="Home" asp-action="CacheGetOrCreateAsynchronous">Cache Get Or Create Asynchronous</a></li>
+                        <li class="list-group-item"><a asp-controller="Home" asp-action="CacheGetOrCreateAbs">Cache Get Or Create Abs</a></li>
+                        <li class="list-group-item"><a asp-controller="Home" asp-action="CacheGetOrCreateAbsSliding">Cache Get Or Create Abs Sliding</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h3>Current Time: @DateTime.Now.TimeOfDay.ToString()</h3>
+                <h3>Cached Time: @(Model == null ? "No Cached Entry Found" : Model.Value.TimeOfDay.ToString())</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
